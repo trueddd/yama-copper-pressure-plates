@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "yama_copper_plates:block/copper_pressure_plate"
+  }
+}
