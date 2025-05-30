@@ -4,33 +4,33 @@ import com.github.ycp.CopperPressurePlate;
 import com.github.ycp.YamaCopperPlates;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 
 public class YcpInitializer implements ModInitializer {
 
-    public static final Block COPPER_PLATE = registerBlock(
-            new CopperPressurePlate(YamaCopperPlates.COPPER_PLATE_KEY),
-            YamaCopperPlates.COPPER_PLATE_KEY
-    );
-
-    private static Block registerBlock(Block block, @NotNull RegistryKey<Block> registryKey) {
-        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, registryKey.getValue());
-        BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey));
-        Registry.register(Registries.ITEM, itemKey, blockItem);
-        return Registry.register(Registries.BLOCK, registryKey.getValue(), block);
-    }
-
     @Override
     public void onInitialize() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE)
-                .register(entries -> entries.add(COPPER_PLATE.asItem()));
+        Block block = Registry.register(
+                BuiltInRegistries.BLOCK,
+                YamaCopperPlates.COPPER_PLATE_KEY,
+                new CopperPressurePlate(YamaCopperPlates.COPPER_PLATE_BLOCK_KEY)
+        );
+        Item item = Registry.register(
+                BuiltInRegistries.ITEM,
+                YamaCopperPlates.COPPER_PLATE_KEY,
+                new BlockItem(block, new Item.Properties().setId(YamaCopperPlates.COPPER_PLATE_ITEM_KEY))
+        );
+
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS)
+                .register(entries -> entries.addAfter(
+                        Items.HEAVY_WEIGHTED_PRESSURE_PLATE.getDefaultInstance(),
+                        item.getDefaultInstance()
+                ));
     }
 }

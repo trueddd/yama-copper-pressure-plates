@@ -1,10 +1,10 @@
 package com.github.ycp;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 
 public class YamaCopperPlates {
 
@@ -12,12 +12,16 @@ public class YamaCopperPlates {
 
     public static final String COPPER_PRESSURE_PLATE_ID = "copper_pressure_plate";
 
-    public static final RegistryKey<Block> COPPER_PLATE_KEY = RegistryKey.of(
-            /* registry = */ RegistryKeys.BLOCK,
-            /* value = */ Identifier.of(YamaCopperPlates.MOD_ID, COPPER_PRESSURE_PLATE_ID)
+    public static final ResourceLocation COPPER_PLATE_KEY = ResourceLocation
+            .fromNamespaceAndPath(MOD_ID, COPPER_PRESSURE_PLATE_ID);
+
+    public static final ResourceKey<Block> COPPER_PLATE_BLOCK_KEY = ResourceKey.create(
+            Registries.BLOCK,
+            YamaCopperPlates.COPPER_PLATE_KEY
     );
-    public static final RegistryKey<Item> COPPER_PLATE_ITEM_KEY = RegistryKey.of(
-            /* registry = */ RegistryKeys.ITEM,
-            /* value = */ Identifier.of(YamaCopperPlates.MOD_ID, COPPER_PRESSURE_PLATE_ID)
+
+    public static final ResourceKey<Item> COPPER_PLATE_ITEM_KEY = ResourceKey.create(
+            Registries.ITEM,
+            YamaCopperPlates.COPPER_PLATE_KEY
     );
 }
