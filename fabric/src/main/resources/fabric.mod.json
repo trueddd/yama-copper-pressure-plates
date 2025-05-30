@@ -17,24 +17,16 @@
 	"entrypoints": {
 		"main": [
 			{
-				"value": "com.github.ycp.YamaCopperPlates",
-				"adapter": "kotlin"
-			}
-		],
-		"client": [
-			{
-				"value": "com.github.ycp.YamaCopperPlatesClient",
-				"adapter": "kotlin"
+				"value": "com.github.ycp.fabric.YcpInitializer"
 			}
 		]
 	},
 	"mixins": [],
 	"depends": {
-		"fabricloader": ">=0.16.13",
+		"fabricloader": ">=0.16.14",
 		"minecraft": "~1.21.5",
 		"java": ">=21",
-		"fabric-api": "*",
-		"fabric-language-kotlin": "*"
+		"architectury": ">=16.1.4"
 	},
 	"suggests": {
 		"another-mod": "*"
