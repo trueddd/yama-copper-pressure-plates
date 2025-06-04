@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "yama_copper_plates:block/copper_pressure_plate"
+  }
+}

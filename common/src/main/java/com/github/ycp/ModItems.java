@@ -16,24 +16,18 @@ import org.jetbrains.annotations.NotNull;
 
 public class ModItems {
 
-    public static final String COPPER_PRESSURE_PLATE_ID = "copper_pressure_plate";
-
     @Contract(" -> new")
     public static @NotNull Block createCopperPressurePlate() {
         return new CopperPressurePlate(
                 BlockSetType.COPPER,
                 AbstractBlock.Settings.copy(Blocks.STONE_PRESSURE_PLATE)
-                        .registryKey(COPPER_PLATE_KEY)
+                        .registryKey(ModRegistryKeys.COPPER_PLATE_KEY)
         );
     }
 
-    private static final RegistryKey<Block> COPPER_PLATE_KEY = RegistryKey.of(
-            /* registry = */ RegistryKeys.BLOCK,
-            /* value = */ Identifier.of(YamaCopperPlates.MOD_ID, COPPER_PRESSURE_PLATE_ID)
-    );
     public static final Block COPPER_PLATE = registerBlock(
             createCopperPressurePlate(),
-            COPPER_PLATE_KEY
+            ModRegistryKeys.COPPER_PLATE_KEY
     );
 
     private static Block registerBlock(Block block, @NotNull RegistryKey<Block> registryKey) {

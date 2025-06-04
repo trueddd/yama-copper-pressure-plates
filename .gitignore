@@ -32,6 +32,10 @@ bin/
 
 fabric/run/
 
+# neoforge
+
+neoforge/run/
+
 # java
 
 hs_err_*.log
