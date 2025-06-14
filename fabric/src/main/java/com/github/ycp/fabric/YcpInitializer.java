@@ -1,16 +1,49 @@
 package com.github.ycp.fabric;
 
-import com.github.ycp.ModItems;
+import com.github.ycp.CopperPressurePlate;
+import com.github.ycp.YamaCopperPlates;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockSetType;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 public class YcpInitializer implements ModInitializer {
 
+    @Contract(" -> new")
+    public static @NotNull Block createCopperPressurePlate() {
+        return new CopperPressurePlate(
+                BlockSetType.COPPER,
+                AbstractBlock.Settings.copy(Blocks.STONE_PRESSURE_PLATE)
+                        .registryKey(YamaCopperPlates.COPPER_PLATE_KEY)
+        );
+    }
+
+    public static final Block COPPER_PLATE = registerBlock(
+            createCopperPressurePlate(),
+            YamaCopperPlates.COPPER_PLATE_KEY
+    );
+
+    private static Block registerBlock(Block block, @NotNull RegistryKey<Block> registryKey) {
+        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, registryKey.getValue());
+        BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey));
+        Registry.register(Registries.ITEM, itemKey, blockItem);
+        return Registry.register(Registries.BLOCK, registryKey.getValue(), block);
+    }
+
     @Override
     public void onInitialize() {
-        ModItems.init();
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE)
-                .register(entries -> entries.add(ModItems.COPPER_PLATE.asItem()));
+                .register(entries -> entries.add(COPPER_PLATE.asItem()));
     }
 }
