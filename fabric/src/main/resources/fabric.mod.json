@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "yama_copper_plates",
+	"version": "${version}",
+	"name": "Yama Copper Plates",
+	"description": "This mod adds Vanilla-friendly copper pressure plates which can only be triggered by players.",
+	"authors": [
+		"truetripled"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.github.ycp.fabric.YcpInitializer"
+			}
+		]
+	},
+	"mixins": [],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"architectury": ">=16.1.4"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

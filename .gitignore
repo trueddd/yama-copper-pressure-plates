@@ -30,7 +30,11 @@ bin/
 
 # fabric
 
-run/
+fabric/run/
+
+# neoforge
+
+neoforge/run/
 
 # java
 
