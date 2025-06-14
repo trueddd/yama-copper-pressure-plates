@@ -2,10 +2,7 @@ package com.github.ycp.neoforge;
 
 import com.github.ycp.CopperPressurePlate;
 import com.github.ycp.YamaCopperPlates;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockSetType;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -29,11 +26,7 @@ public class YcpInitializer {
 
     public static final DeferredBlock<Block> COPPER_PLATE_BLOCK = BLOCKS.register(
             YamaCopperPlates.COPPER_PRESSURE_PLATE_ID,
-            () -> new CopperPressurePlate(
-                    BlockSetType.COPPER,
-                    AbstractBlock.Settings.copy(Blocks.STONE_PRESSURE_PLATE)
-                            .registryKey(YamaCopperPlates.COPPER_PLATE_KEY)
-            )
+            () -> new CopperPressurePlate(YamaCopperPlates.COPPER_PLATE_KEY)
     );
 
     public static final DeferredItem<BlockItem> COPPER_PLATE_ITEM = ITEMS.register(
