@@ -2,10 +2,12 @@ package com.github.ycp.neoforge;
 
 import com.github.ycp.CopperPressurePlate;
 import com.github.ycp.YamaCopperPlates;
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -26,15 +28,14 @@ public class YcpInitializer {
 
     public static final DeferredBlock<Block> COPPER_PLATE_BLOCK = BLOCKS.register(
             YamaCopperPlates.COPPER_PRESSURE_PLATE_ID,
-            () -> new CopperPressurePlate(YamaCopperPlates.COPPER_PLATE_KEY)
+            () -> new CopperPressurePlate(YamaCopperPlates.COPPER_PLATE_BLOCK_KEY)
     );
 
     public static final DeferredItem<BlockItem> COPPER_PLATE_ITEM = ITEMS.register(
             YamaCopperPlates.COPPER_PRESSURE_PLATE_ID,
             () -> new BlockItem(
                     COPPER_PLATE_BLOCK.get(),
-                    new Item.Settings()
-                            .registryKey(YamaCopperPlates.COPPER_PLATE_ITEM_KEY)
+                    new Item.Properties().setId(YamaCopperPlates.COPPER_PLATE_ITEM_KEY)
             )
     );
 
@@ -50,8 +51,12 @@ public class YcpInitializer {
     }
 
     private void addCreative(@NotNull BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == ItemGroups.REDSTONE) {
-            event.add(COPPER_PLATE_BLOCK);
+        if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
+            event.insertAfter(
+                    Items.HEAVY_WEIGHTED_PRESSURE_PLATE.getDefaultInstance(),
+                    COPPER_PLATE_ITEM.toStack(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
         }
     }
 
