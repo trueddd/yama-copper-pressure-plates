@@ -8,8 +8,8 @@
 		"truetripled"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/yama-copper-pressure-plates",
+		"sources": "https://github.com/trueddd/yama-copper-pressure-plates"
 	},
 	"license": "CC0-1.0",
 	"icon": "icon.png",
@@ -23,8 +23,8 @@
 	},
 	"mixins": [],
 	"depends": {
-		"fabricloader": ">=0.17.2",
-		"minecraft": "~1.21.7",
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.8",
 		"java": ">=21",
 		"architectury": ">=17.0.8"
 	},
