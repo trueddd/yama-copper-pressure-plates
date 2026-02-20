@@ -11,17 +11,28 @@ public class YamaCopperPlates {
     public static final String MOD_ID = "yama_copper_plates";
 
     public static final String COPPER_PRESSURE_PLATE_ID = "copper_pressure_plate";
+    public static final String WEATHERING_COPPER_PRESSURE_PLATE_ID = "weathering_copper_pressure_plate";
 
     public static final ResourceLocation COPPER_PLATE_KEY = ResourceLocation
             .fromNamespaceAndPath(MOD_ID, COPPER_PRESSURE_PLATE_ID);
+    public static final ResourceLocation WEATHERING_COPPER_PLATE_KEY = ResourceLocation
+            .fromNamespaceAndPath(MOD_ID, WEATHERING_COPPER_PRESSURE_PLATE_ID);
 
     public static final ResourceKey<Block> COPPER_PLATE_BLOCK_KEY = ResourceKey.create(
             Registries.BLOCK,
             YamaCopperPlates.COPPER_PLATE_KEY
     );
+    public static final ResourceKey<Block> WEATHERING_COPPER_PLATE_BLOCK_KEY = ResourceKey.create(
+            Registries.BLOCK,
+            YamaCopperPlates.WEATHERING_COPPER_PLATE_KEY
+    );
 
     public static final ResourceKey<Item> COPPER_PLATE_ITEM_KEY = ResourceKey.create(
             Registries.ITEM,
             YamaCopperPlates.COPPER_PLATE_KEY
+    );
+    public static final ResourceKey<Item> WEATHERING_COPPER_PLATE_ITEM_KEY = ResourceKey.create(
+            Registries.ITEM,
+            YamaCopperPlates.WEATHERING_COPPER_PLATE_KEY
     );
 }

@@ -1,4 +1,6 @@
 {
-  "item.yama_copper_plates.copper_pressure_plate": "Waxed Lightly Weathered Pressure Plate of Copper",
-  "block.yama_copper_plates.copper_pressure_plate": "Waxed Lightly Weathered Pressure Plate of Copper"
+  "item.yama_copper_plates.copper_pressure_plate": "Waxed Pressure Plate of Copper",
+  "block.yama_copper_plates.copper_pressure_plate": "Waxed Pressure Plate of Copper",
+  "item.yama_copper_plates.weathering_copper_pressure_plate": "Weathered Pressure Plate of Copper",
+  "block.yama_copper_plates.weathering_copper_pressure_plate": "Weathered Pressure Plate of Copper"
 }
