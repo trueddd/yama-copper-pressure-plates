@@ -5,7 +5,7 @@ license = "CC0-1.0"
 
 [[mods]]
 modId = "yama_copper_plates"
-version = "${version}"
+version = "${mod_version}"
 displayName = "Yama Copper Plates"
 authors = "truetripled"
 logoFile = "icon.png"

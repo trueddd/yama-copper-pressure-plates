@@ -16,26 +16,13 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
-import net.neoforged.neoforge.registries.datamaps.builtin.Oxidizable;
-import net.neoforged.neoforge.registries.datamaps.builtin.Waxable;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.function.Function;
 
 @Mod(YamaCopperPlates.MOD_ID)
 public class YcpInitializer {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(YamaCopperPlates.MOD_ID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(YamaCopperPlates.MOD_ID);
-
-//    public static final Function<WeatheringCopper.WeatherState, Block> CopperPlateBlockFactory = (weatherState ->
-//            new CopperPressurePlate(YamaCopperPlates.COPPER_PLATE_BLOCK_KEY, weatherState)
-//    );
-
-//    public static final Function<WeatheringCopper.WeatherState, Block> WeatheringCopperPlateBlockFactory = (weatherState ->
-//            new WeatheringCopperPressurePlate(YamaCopperPlates.WEATHERING_COPPER_PLATE_BLOCK_KEY, weatherState)
-//    );
 
     // region blocks
     public static final DeferredBlock<Block> COPPER_PLATE_BLOCK = BLOCKS.register(
@@ -163,54 +150,15 @@ public class YcpInitializer {
 
     public YcpInitializer(@NotNull IEventBus eventBus) {
         eventBus.addListener(this::setup);
+        eventBus.addListener(YcpDataGenerator::gatherData);
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
-
-//        eventBus.addListener(this::registerWaxing);
 
         NeoForge.EVENT_BUS.register(this);
         eventBus.addListener(this::addCreative);
     }
 
     private void setup(FMLCommonSetupEvent event) {
-    }
-
-    private void registerWaxing(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            HoneycombItem.WAXABLES.get().put(
-                    COPPER_PLATE_BLOCK.get(),
-                    WAXED_COPPER_PLATE_BLOCK.get()
-            );
-            HoneycombItem.WAXABLES.get().put(
-                    EXPOSED_COPPER_PLATE_BLOCK.get(),
-                    WAXED_EXPOSED_COPPER_PLATE_BLOCK.get()
-            );
-            HoneycombItem.WAXABLES.get().put(
-                    WEATHERED_COPPER_PLATE_BLOCK.get(),
-                    WAXED_WEATHERED_COPPER_PLATE_BLOCK.get()
-            );
-            HoneycombItem.WAXABLES.get().put(
-                    OXIDIZED_COPPER_PLATE_BLOCK.get(),
-                    WAXED_OXIDIZED_COPPER_PLATE_BLOCK.get()
-            );
-
-            HoneycombItem.WAX_OFF_BY_BLOCK.get().put(
-                    WAXED_COPPER_PLATE_BLOCK.get(),
-                    COPPER_PLATE_BLOCK.get()
-            );
-            HoneycombItem.WAX_OFF_BY_BLOCK.get().put(
-                    WAXED_EXPOSED_COPPER_PLATE_BLOCK.get(),
-                    EXPOSED_COPPER_PLATE_BLOCK.get()
-            );
-            HoneycombItem.WAX_OFF_BY_BLOCK.get().put(
-                    WAXED_WEATHERED_COPPER_PLATE_BLOCK.get(),
-                    WEATHERED_COPPER_PLATE_BLOCK.get()
-            );
-            HoneycombItem.WAX_OFF_BY_BLOCK.get().put(
-                    WAXED_OXIDIZED_COPPER_PLATE_BLOCK.get(),
-                    OXIDIZED_COPPER_PLATE_BLOCK.get()
-            );
-        });
     }
 
     private void addCreative(@NotNull BuildCreativeModeTabContentsEvent event) {

@@ -11,6 +11,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.WeatheringCopper;
 
 public class YcpInitializer implements ModInitializer {
 
@@ -19,7 +20,10 @@ public class YcpInitializer implements ModInitializer {
         Block block = Registry.register(
                 BuiltInRegistries.BLOCK,
                 YamaCopperPlates.COPPER_PLATE_KEY,
-                new CopperPressurePlate(YamaCopperPlates.COPPER_PLATE_BLOCK_KEY)
+                new CopperPressurePlate(
+                        CopperPressurePlate.PropertiesFactory.apply(YamaCopperPlates.COPPER_PLATE_BLOCK_KEY),
+                        WeatheringCopper.WeatherState.UNAFFECTED
+                )
         );
         Item item = Registry.register(
                 BuiltInRegistries.ITEM,
