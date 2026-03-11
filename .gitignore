@@ -35,6 +35,7 @@ fabric/run/
 # neoforge
 
 neoforge/run/
+neoforge/src/generated/
 
 # java
 

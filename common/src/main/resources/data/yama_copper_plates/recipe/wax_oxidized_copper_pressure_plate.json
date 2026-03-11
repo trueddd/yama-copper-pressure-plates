@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
   "ingredients": [
-    { "item": "yama_copper_plates:oxidized_copper_pressure_plate" },
-    { "item": "minecraft:honeycomb" }
+    "yama_copper_plates:oxidized_copper_pressure_plate",
+    "minecraft:honeycomb"
   ],
   "result": {
     "id": "yama_copper_plates:waxed_oxidized_copper_pressure_plate",
