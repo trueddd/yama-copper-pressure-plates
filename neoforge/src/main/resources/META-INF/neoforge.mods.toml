@@ -5,7 +5,7 @@ license = "CC0-1.0"
 
 [[mods]]
 modId = "yama_copper_plates"
-version = "${version}"
+version = "${mod_version}"
 displayName = "Yama Copper Plates"
 authors = "truetripled"
 logoFile = "icon.png"
@@ -23,13 +23,13 @@ side = "BOTH"
 [[dependencies.yama_copper_plates]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.9,)"
+versionRange = "[1.21.10,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.yama_copper_plates]]
 modId = "architectury"
 type = "required"
-versionRange = "[18.0.5,)"
+versionRange = "[18.0.6,)"
 ordering = "AFTER"
 side = "BOTH"

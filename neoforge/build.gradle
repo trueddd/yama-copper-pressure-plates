@@ -1,5 +1,7 @@
 plugins {
+    id 'idea'
     id 'com.gradleup.shadow'
+    id 'dev.architectury.loom'
 }
 
 architectury {
@@ -41,11 +43,28 @@ dependencies {
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 }
 
-processResources {
-    inputs.property 'version', project.version
+loom {
+    neoForge {
+    }
 
-    filesMatching('META-INF/neoforge.mods.toml') {
-        expand version: project.version
+    runs {
+        data {
+            serverData()
+            programArgs "--all", "--mod", "yama_copper_plates"
+            programArgs "--output", file("src/generated/resources").absolutePath
+            programArgs "--existing", file("src/main/resources").absolutePath
+        }
+    }
+}
+
+processResources {
+    var replaceProperties = [mod_version: project.version] // project.version = mod_version from root
+    inputs.properties replaceProperties
+    filesMatching("META-INF/neoforge.mods.toml") {
+        expand replaceProperties
+    }
+    from(file("src/generated/resources")) {
+        include "**/*.json"
     }
 }
 

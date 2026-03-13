@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "R": "minecraft:redstone",
+    "c": "minecraft:copper_ingot"
+  },
+  "pattern": [
+    "RR",
+    "cc"
+  ],
+  "result": {
+    "id": "yama_copper_plates:unwaxed_copper_pressure_plate",
+    "count": 2
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    "yama_copper_plates:weathered_copper_pressure_plate",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "yama_copper_plates:waxed_weathered_copper_pressure_plate",
+    "count": 1
+  }
+}

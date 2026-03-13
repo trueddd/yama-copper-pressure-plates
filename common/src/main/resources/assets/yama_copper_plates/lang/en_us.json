@@ -1,4 +1,18 @@
 {
-  "item.yama_copper_plates.copper_pressure_plate": "Waxed Lightly Weathered Pressure Plate of Copper",
-  "block.yama_copper_plates.copper_pressure_plate": "Waxed Lightly Weathered Pressure Plate of Copper"
+  "item.yama_copper_plates.unwaxed_copper_pressure_plate": "Copper Pressure Plate",
+  "block.yama_copper_plates.unwaxed_copper_pressure_plate": "Copper Pressure Plate",
+  "item.yama_copper_plates.exposed_copper_pressure_plate": "Exposed Copper Pressure Plate",
+  "block.yama_copper_plates.exposed_copper_pressure_plate": "Exposed Copper Pressure Plate",
+  "item.yama_copper_plates.weathered_copper_pressure_plate": "Weathered Copper Pressure Plate",
+  "block.yama_copper_plates.weathered_copper_pressure_plate": "Weathered Copper Pressure Plate",
+  "item.yama_copper_plates.oxidized_copper_pressure_plate": "Oxidized Copper Pressure Plate",
+  "block.yama_copper_plates.oxidized_copper_pressure_plate": "Oxidized Copper Pressure Plate",
+  "item.yama_copper_plates.copper_pressure_plate": "Waxed Copper Pressure Plate",
+  "block.yama_copper_plates.copper_pressure_plate": "Waxed Copper Pressure Plate",
+  "item.yama_copper_plates.waxed_exposed_copper_pressure_plate": "Waxed Exposed Copper Pressure Plate",
+  "block.yama_copper_plates.waxed_exposed_copper_pressure_plate": "Waxed Exposed Copper Pressure Plate",
+  "item.yama_copper_plates.waxed_weathered_copper_pressure_plate": "Waxed Weathered Copper Pressure Plate",
+  "block.yama_copper_plates.waxed_weathered_copper_pressure_plate": "Waxed Weathered Copper Pressure Plate",
+  "item.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "Waxed Oxidized Copper Pressure Plate",
+  "block.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "Waxed Oxidized Copper Pressure Plate"
 }
