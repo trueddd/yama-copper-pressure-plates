@@ -5,6 +5,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.WeatheringCopper;
 import org.jetbrains.annotations.NotNull;
 
 public class YamaCopperPlates {
@@ -62,4 +63,23 @@ public class YamaCopperPlates {
     public static final ResourceKey<Item> WAXED_EXPOSED_COPPER_PLATE_ITEM_KEY = itemKeyOf(YamaCopperPlates.WAXED_EXPOSED_COPPER_PLATE_KEY);
     public static final ResourceKey<Item> WAXED_WEATHERED_COPPER_PLATE_ITEM_KEY = itemKeyOf(YamaCopperPlates.WAXED_WEATHERED_COPPER_PLATE_KEY);
     public static final ResourceKey<Item> WAXED_OXIDIZED_COPPER_PLATE_ITEM_KEY = itemKeyOf(YamaCopperPlates.WAXED_OXIDIZED_COPPER_PLATE_KEY);
+
+    private static ResourceKey<Block> blockKeyFor(boolean waxed, WeatheringCopper.@NotNull WeatherState weatherState) {
+        return switch (weatherState) {
+            case UNAFFECTED -> waxed ? WAXED_COPPER_PLATE_BLOCK_KEY : COPPER_PLATE_BLOCK_KEY;
+            case EXPOSED -> waxed ? WAXED_EXPOSED_COPPER_PLATE_BLOCK_KEY : EXPOSED_COPPER_PLATE_BLOCK_KEY;
+            case WEATHERED -> waxed ? WAXED_WEATHERED_COPPER_PLATE_BLOCK_KEY : WEATHERED_COPPER_PLATE_BLOCK_KEY;
+            case OXIDIZED -> waxed ? WAXED_OXIDIZED_COPPER_PLATE_BLOCK_KEY : OXIDIZED_COPPER_PLATE_BLOCK_KEY;
+        };
+    }
+
+    @NotNull
+    public static Block createCopperPlateBlock(boolean waxed, WeatheringCopper.WeatherState weatherState) {
+        var key = blockKeyFor(waxed, weatherState);
+        if (waxed) {
+            return new CopperPressurePlate(CopperPressurePlate.PropertiesFactory.apply(key), weatherState);
+        } else {
+            return new WeatheringCopperPressurePlate(WeatheringCopperPressurePlate.PropertiesFactory.apply(key), weatherState);
+        }
+    }
 }

@@ -1,9 +1,11 @@
 package com.github.ycp.neoforge;
 
-import com.github.ycp.CopperPressurePlate;
-import com.github.ycp.WeatheringCopperPressurePlate;
 import com.github.ycp.YamaCopperPlates;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.neoforged.bus.api.IEventBus;
@@ -27,31 +29,19 @@ public class YcpInitializer {
     // region blocks
     public static final DeferredBlock<Block> COPPER_PLATE_BLOCK = BLOCKS.register(
             YamaCopperPlates.COPPER_PRESSURE_PLATE_ID,
-            () -> new WeatheringCopperPressurePlate(
-                    WeatheringCopperPressurePlate.PropertiesFactory.apply(YamaCopperPlates.COPPER_PLATE_BLOCK_KEY),
-                    WeatheringCopper.WeatherState.UNAFFECTED
-            )
+            () -> YamaCopperPlates.createCopperPlateBlock(/* waxed = */ false, WeatheringCopper.WeatherState.UNAFFECTED)
     );
     public static final DeferredBlock<Block> EXPOSED_COPPER_PLATE_BLOCK = BLOCKS.register(
             YamaCopperPlates.EXPOSED_COPPER_PRESSURE_PLATE_ID,
-            () -> new WeatheringCopperPressurePlate(
-                    WeatheringCopperPressurePlate.PropertiesFactory.apply(YamaCopperPlates.EXPOSED_COPPER_PLATE_BLOCK_KEY),
-                    WeatheringCopper.WeatherState.EXPOSED
-            )
+            () -> YamaCopperPlates.createCopperPlateBlock(/* waxed = */ false, WeatheringCopper.WeatherState.EXPOSED)
     );
     public static final DeferredBlock<Block> WEATHERED_COPPER_PLATE_BLOCK = BLOCKS.register(
             YamaCopperPlates.WEATHERED_COPPER_PRESSURE_PLATE_ID,
-            () -> new WeatheringCopperPressurePlate(
-                    WeatheringCopperPressurePlate.PropertiesFactory.apply(YamaCopperPlates.WEATHERED_COPPER_PLATE_BLOCK_KEY),
-                    WeatheringCopper.WeatherState.WEATHERED
-            )
+            () -> YamaCopperPlates.createCopperPlateBlock(/* waxed = */ false, WeatheringCopper.WeatherState.WEATHERED)
     );
     public static final DeferredBlock<Block> OXIDIZED_COPPER_PLATE_BLOCK = BLOCKS.register(
             YamaCopperPlates.OXIDIZED_COPPER_PRESSURE_PLATE_ID,
-            () -> new WeatheringCopperPressurePlate(
-                    WeatheringCopperPressurePlate.PropertiesFactory.apply(YamaCopperPlates.OXIDIZED_COPPER_PLATE_BLOCK_KEY),
-                    WeatheringCopper.WeatherState.OXIDIZED
-            )
+            () -> YamaCopperPlates.createCopperPlateBlock(/* waxed = */ false, WeatheringCopper.WeatherState.OXIDIZED)
     );
     // endregion
 
@@ -89,31 +79,19 @@ public class YcpInitializer {
     // region waxed blocks
     public static final DeferredBlock<Block> WAXED_COPPER_PLATE_BLOCK = BLOCKS.register(
             YamaCopperPlates.WAXED_COPPER_PRESSURE_PLATE_ID,
-            () -> new CopperPressurePlate(
-                    CopperPressurePlate.PropertiesFactory.apply(YamaCopperPlates.WAXED_COPPER_PLATE_BLOCK_KEY),
-                    WeatheringCopper.WeatherState.UNAFFECTED
-            )
+            () -> YamaCopperPlates.createCopperPlateBlock(/* waxed = */ true, WeatheringCopper.WeatherState.UNAFFECTED)
     );
     public static final DeferredBlock<Block> WAXED_EXPOSED_COPPER_PLATE_BLOCK = BLOCKS.register(
             YamaCopperPlates.WAXED_EXPOSED_COPPER_PRESSURE_PLATE_ID,
-            () -> new CopperPressurePlate(
-                    CopperPressurePlate.PropertiesFactory.apply(YamaCopperPlates.WAXED_EXPOSED_COPPER_PLATE_BLOCK_KEY),
-                    WeatheringCopper.WeatherState.EXPOSED
-            )
+            () -> YamaCopperPlates.createCopperPlateBlock(/* waxed = */ true, WeatheringCopper.WeatherState.EXPOSED)
     );
     public static final DeferredBlock<Block> WAXED_WEATHERED_COPPER_PLATE_BLOCK = BLOCKS.register(
             YamaCopperPlates.WAXED_WEATHERED_COPPER_PRESSURE_PLATE_ID,
-            () -> new CopperPressurePlate(
-                    CopperPressurePlate.PropertiesFactory.apply(YamaCopperPlates.WAXED_WEATHERED_COPPER_PLATE_BLOCK_KEY),
-                    WeatheringCopper.WeatherState.WEATHERED
-            )
+            () -> YamaCopperPlates.createCopperPlateBlock(/* waxed = */ true, WeatheringCopper.WeatherState.WEATHERED)
     );
     public static final DeferredBlock<Block> WAXED_OXIDIZED_COPPER_PLATE_BLOCK = BLOCKS.register(
             YamaCopperPlates.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE_ID,
-            () -> new CopperPressurePlate(
-                    CopperPressurePlate.PropertiesFactory.apply(YamaCopperPlates.WAXED_OXIDIZED_COPPER_PLATE_BLOCK_KEY),
-                    WeatheringCopper.WeatherState.OXIDIZED
-            )
+            () -> YamaCopperPlates.createCopperPlateBlock(/* waxed = */ true, WeatheringCopper.WeatherState.OXIDIZED)
     );
     // endregion
 
