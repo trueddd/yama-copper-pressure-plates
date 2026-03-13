@@ -53,7 +53,6 @@ loom {
             programArgs "--all", "--mod", "yama_copper_plates"
             programArgs "--output", file("src/generated/resources").absolutePath
             programArgs "--existing", file("src/main/resources").absolutePath
-            programArgs "--forceExit"
         }
     }
 }
@@ -69,4 +68,11 @@ processResources {
     }
 }
 
-println "mod_version resolved to: ${project.mod_version}"
+shadowJar {
+    configurations = [project.configurations.shadowBundle]
+    archiveClassifier = 'dev-shadow'
+}
+
+remapJar {
+    inputFile.set shadowJar.archiveFile
+}
