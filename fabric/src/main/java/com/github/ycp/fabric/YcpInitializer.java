@@ -23,7 +23,7 @@ public class YcpInitializer implements ModInitializer {
     }
 
     private @NotNull Item registerBlockItem(ResourceLocation resourceLocation, ResourceKey<Item> key, Block block) {
-        return Registry.register(BuiltInRegistries.ITEM, resourceLocation, new BlockItem(block, new Item.Properties().setId(key)));
+        return Registry.register(BuiltInRegistries.ITEM, resourceLocation, new BlockItem(block, new Item.Properties()));
     }
 
     private void registerBlocks() {
