@@ -20,8 +20,7 @@ public final class WeatheringCopperPressurePlate extends CopperPressurePlate imp
             .ofFullCopy(Blocks.STONE_PRESSURE_PLATE)
             .mapColor(MapColor.COLOR_ORANGE)
             .sound(SoundType.METAL)
-            .randomTicks()
-            .setId(key);
+            .randomTicks();
 
     public WeatheringCopperPressurePlate(Properties properties, WeatheringCopper.WeatherState weatherState) {
         super(properties, weatherState);

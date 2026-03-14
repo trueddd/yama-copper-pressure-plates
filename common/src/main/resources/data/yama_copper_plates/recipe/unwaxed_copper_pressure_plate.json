@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "R": "minecraft:redstone",
-    "c": "minecraft:copper_ingot"
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    }
   },
   "pattern": [
     "RR",

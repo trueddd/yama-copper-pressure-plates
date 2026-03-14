@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "#": "minecraft:honeycomb",
-    "R": "minecraft:redstone",
-    "c": "minecraft:copper_ingot"
+    "#": {
+      "item": "minecraft:honeycomb"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    }
   },
   "pattern": [
     "##",

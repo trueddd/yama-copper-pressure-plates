@@ -50,28 +50,28 @@ public class YcpInitializer {
             YamaCopperPlates.COPPER_PRESSURE_PLATE_ID,
             () -> new BlockItem(
                     COPPER_PLATE_BLOCK.get(),
-                    new Item.Properties().setId(YamaCopperPlates.COPPER_PLATE_ITEM_KEY)
+                    new Item.Properties()
             )
     );
     public static final DeferredItem<BlockItem> EXPOSED_COPPER_PLATE_ITEM = ITEMS.register(
             YamaCopperPlates.EXPOSED_COPPER_PRESSURE_PLATE_ID,
             () -> new BlockItem(
                     EXPOSED_COPPER_PLATE_BLOCK.get(),
-                    new Item.Properties().setId(YamaCopperPlates.EXPOSED_COPPER_PLATE_ITEM_KEY)
+                    new Item.Properties()
             )
     );
     public static final DeferredItem<BlockItem> WEATHERED_COPPER_PLATE_ITEM = ITEMS.register(
             YamaCopperPlates.WEATHERED_COPPER_PRESSURE_PLATE_ID,
             () -> new BlockItem(
                     WEATHERED_COPPER_PLATE_BLOCK.get(),
-                    new Item.Properties().setId(YamaCopperPlates.WEATHERED_COPPER_PLATE_ITEM_KEY)
+                    new Item.Properties()
             )
     );
     public static final DeferredItem<BlockItem> OXIDIZED_COPPER_PLATE_ITEM = ITEMS.register(
             YamaCopperPlates.OXIDIZED_COPPER_PRESSURE_PLATE_ID,
             () -> new BlockItem(
                     OXIDIZED_COPPER_PLATE_BLOCK.get(),
-                    new Item.Properties().setId(YamaCopperPlates.OXIDIZED_COPPER_PLATE_ITEM_KEY)
+                    new Item.Properties()
             )
     );
     // endregion
@@ -100,28 +100,28 @@ public class YcpInitializer {
             YamaCopperPlates.WAXED_COPPER_PRESSURE_PLATE_ID,
             () -> new BlockItem(
                     WAXED_COPPER_PLATE_BLOCK.get(),
-                    new Item.Properties().setId(YamaCopperPlates.WAXED_COPPER_PLATE_ITEM_KEY)
+                    new Item.Properties()
             )
     );
     public static final DeferredItem<BlockItem> WAXED_EXPOSED_COPPER_PLATE_ITEM = ITEMS.register(
             YamaCopperPlates.WAXED_EXPOSED_COPPER_PRESSURE_PLATE_ID,
             () -> new BlockItem(
                     WAXED_EXPOSED_COPPER_PLATE_BLOCK.get(),
-                    new Item.Properties().setId(YamaCopperPlates.WAXED_EXPOSED_COPPER_PLATE_ITEM_KEY)
+                    new Item.Properties()
             )
     );
     public static final DeferredItem<BlockItem> WAXED_WEATHERED_COPPER_PLATE_ITEM = ITEMS.register(
             YamaCopperPlates.WAXED_WEATHERED_COPPER_PRESSURE_PLATE_ID,
             () -> new BlockItem(
                     WAXED_WEATHERED_COPPER_PLATE_BLOCK.get(),
-                    new Item.Properties().setId(YamaCopperPlates.WAXED_WEATHERED_COPPER_PLATE_ITEM_KEY)
+                    new Item.Properties()
             )
     );
     public static final DeferredItem<BlockItem> WAXED_OXIDIZED_COPPER_PLATE_ITEM = ITEMS.register(
             YamaCopperPlates.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE_ID,
             () -> new BlockItem(
                     WAXED_OXIDIZED_COPPER_PLATE_BLOCK.get(),
-                    new Item.Properties().setId(YamaCopperPlates.WAXED_OXIDIZED_COPPER_PLATE_ITEM_KEY)
+                    new Item.Properties()
             )
     );
     // endregion

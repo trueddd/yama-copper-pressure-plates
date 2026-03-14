@@ -26,8 +26,7 @@ public class CopperPressurePlate extends PressurePlateBlock {
     public static final Function<ResourceKey<Block>, Properties> PropertiesFactory = (key) -> Properties
             .ofFullCopy(Blocks.STONE_PRESSURE_PLATE)
             .mapColor(MapColor.COLOR_ORANGE)
-            .sound(SoundType.METAL)
-            .setId(key);
+            .sound(SoundType.METAL);
 
     public CopperPressurePlate(Properties properties, WeatheringCopper.WeatherState weatherState) {
         super(BlockSetType.COPPER, properties);

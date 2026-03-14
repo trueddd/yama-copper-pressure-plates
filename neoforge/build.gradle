@@ -49,7 +49,7 @@ loom {
 
     runs {
         data {
-            serverData()
+            data()
             programArgs "--all", "--mod", "yama_copper_plates"
             programArgs "--output", file("src/generated/resources").absolutePath
             programArgs "--existing", file("src/main/resources").absolutePath

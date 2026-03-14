@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 public class YcpDataGenerator {
 
     @SubscribeEvent
-    public static void gatherData(@NotNull GatherDataEvent.Server event) {
+    public static void gatherData(@NotNull GatherDataEvent event) {
         event.createProvider(YcpDataMapProvider::new);
     }
 }
