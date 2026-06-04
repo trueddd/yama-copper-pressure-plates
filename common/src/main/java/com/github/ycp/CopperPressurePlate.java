@@ -7,7 +7,11 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
@@ -35,13 +39,13 @@ public class CopperPressurePlate extends PressurePlateBlock {
     }
 
     @Override
-    protected int getSignalStrength(Level level, BlockPos blockPos) {
+    protected int getSignalStrength(Level level, @NotNull BlockPos blockPos) {
         Predicate<Entity> predicate = entity -> !entity.isSpectator();
         return level.getEntitiesOfClass(Player.class, BlockBox.of(blockPos).aabb(), predicate).size();
     }
 
     @Override
-    protected @NotNull List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+    protected @NotNull List<ItemStack> getDrops(@NotNull BlockState blockState, LootParams.@NotNull Builder builder) {
         return Collections.singletonList(new ItemStack(this));
     }
 }

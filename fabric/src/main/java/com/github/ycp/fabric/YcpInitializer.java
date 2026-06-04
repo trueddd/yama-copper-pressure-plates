@@ -2,12 +2,12 @@ package com.github.ycp.fabric;
 
 import com.github.ycp.YamaCopperPlates;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -18,11 +18,11 @@ import org.jetbrains.annotations.NotNull;
 
 public class YcpInitializer implements ModInitializer {
 
-    private @NotNull Block registerBlock(ResourceLocation resourceLocation, Block block) {
+    private @NotNull Block registerBlock(Identifier resourceLocation, Block block) {
         return Registry.register(BuiltInRegistries.BLOCK, resourceLocation, block);
     }
 
-    private @NotNull Item registerBlockItem(ResourceLocation resourceLocation, ResourceKey<Item> key, Block block) {
+    private @NotNull Item registerBlockItem(Identifier resourceLocation, ResourceKey<Item> key, Block block) {
         return Registry.register(BuiltInRegistries.ITEM, resourceLocation, new BlockItem(block, new Item.Properties().setId(key)));
     }
 
@@ -103,8 +103,8 @@ public class YcpInitializer implements ModInitializer {
                 waxedOxidizedCopperPlateBlock
         );
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS)
-                .register(entries -> entries.addAfter(
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.REDSTONE_BLOCKS)
+                .register(entries -> entries.insertAfter(
                         Items.HEAVY_WEIGHTED_PRESSURE_PLATE.getDefaultInstance(),
                         copperPlateItem.getDefaultInstance(),
                         exposedCopperPlateItem.getDefaultInstance(),
@@ -116,14 +116,14 @@ public class YcpInitializer implements ModInitializer {
                         waxedOxidizedCopperPlateItem.getDefaultInstance()
                 ));
 
-        OxidizableBlocksRegistry.registerWaxableBlockPair(copperPlateBlock, waxedCopperPlateBlock);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(exposedCopperPlateBlock, waxedExposedCopperPlateBlock);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(weatheredCopperPlateBlock, waxedWeatheredCopperPlateBlock);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(oxidizedCopperPlateBlock, waxedOxidizedCopperPlateBlock);
+        OxidizableBlocksRegistry.registerWaxable(copperPlateBlock, waxedCopperPlateBlock);
+        OxidizableBlocksRegistry.registerWaxable(exposedCopperPlateBlock, waxedExposedCopperPlateBlock);
+        OxidizableBlocksRegistry.registerWaxable(weatheredCopperPlateBlock, waxedWeatheredCopperPlateBlock);
+        OxidizableBlocksRegistry.registerWaxable(oxidizedCopperPlateBlock, waxedOxidizedCopperPlateBlock);
 
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(copperPlateBlock, exposedCopperPlateBlock);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(exposedCopperPlateBlock, weatheredCopperPlateBlock);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(weatheredCopperPlateBlock, oxidizedCopperPlateBlock);
+        OxidizableBlocksRegistry.registerNextStage(copperPlateBlock, exposedCopperPlateBlock);
+        OxidizableBlocksRegistry.registerNextStage(exposedCopperPlateBlock, weatheredCopperPlateBlock);
+        OxidizableBlocksRegistry.registerNextStage(weatheredCopperPlateBlock, oxidizedCopperPlateBlock);
     }
 
     @Override

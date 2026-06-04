@@ -16,20 +16,20 @@ This mod adds Vanilla-friendly copper pressure plates which can only be triggere
 [[dependencies.yama_copper_plates]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21,)"
+versionRange = "[26.1.2.71,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.yama_copper_plates]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.10,)"
+versionRange = "[26.1.2,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.yama_copper_plates]]
 modId = "architectury"
 type = "required"
-versionRange = "[18.0.6,)"
+versionRange = "[20.0.4,)"
 ordering = "AFTER"
 side = "BOTH"
