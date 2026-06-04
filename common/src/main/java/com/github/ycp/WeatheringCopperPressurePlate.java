@@ -28,7 +28,7 @@ public final class WeatheringCopperPressurePlate extends CopperPressurePlate imp
     }
 
     @Override
-    protected void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
+    protected void randomTick(@NotNull BlockState blockState, @NotNull ServerLevel serverLevel, @NotNull BlockPos blockPos, @NotNull RandomSource randomSource) {
         this.changeOverTime(blockState, serverLevel, blockPos, randomSource);
     }
 
