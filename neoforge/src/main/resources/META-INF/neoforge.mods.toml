@@ -3,6 +3,9 @@ loaderVersion = "[4,)"
 issueTrackerURL = "https://github.com/trueddd/yama-copper-pressure-plates/issues"
 license = "CC0-1.0"
 
+[[mixins]]
+config = "yama_copper_plates.neoforge.mixins.json"
+
 [[mods]]
 modId = "yama_copper_plates"
 version = "${mod_version}"
