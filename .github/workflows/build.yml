@@ -1,37 +1,23 @@
 name: build
 on:
-  push:
-    # Build only when a version tag is pushed, e.g. `v1.3.0`.
-    tags:
-      - 'v*'
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
-    strategy:
-      matrix:
-        # Use these Java versions
-        java: [
-          25,
-        ]
     runs-on: ubuntu-22.04
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
       - name: validate gradle wrapper
         uses: gradle/actions/wrapper-validation@v4
-      - name: setup jdk ${{ matrix.java }}
+      - name: setup jdk
         uses: actions/setup-java@v4
         with:
-          java-version: ${{ matrix.java }}
-          distribution: 'temurin'
+          java-version: 25
+          distribution: temurin
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
       - name: build
-        run: ./gradlew clean runData build shadowJar
-      - name: capture build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: Artifacts
-          path: |
-            fabric/build/libs/
-            neoforge/build/libs/
+        run: ./gradlew clean runData build
