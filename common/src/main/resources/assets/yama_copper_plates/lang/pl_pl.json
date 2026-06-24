@@ -1,0 +1,18 @@
+{
+  "item.yama_copper_plates.unwaxed_copper_pressure_plate": "Miedziana płytka naciskowa",
+  "block.yama_copper_plates.unwaxed_copper_pressure_plate": "Miedziana płytka naciskowa",
+  "item.yama_copper_plates.exposed_copper_pressure_plate": "Zwietrzała miedziana płytka naciskowa",
+  "block.yama_copper_plates.exposed_copper_pressure_plate": "Zwietrzała miedziana płytka naciskowa",
+  "item.yama_copper_plates.weathered_copper_pressure_plate": "Zaśniedziała miedziana płytka naciskowa",
+  "block.yama_copper_plates.weathered_copper_pressure_plate": "Zaśniedziała miedziana płytka naciskowa",
+  "item.yama_copper_plates.oxidized_copper_pressure_plate": "Utleniona miedziana płytka naciskowa",
+  "block.yama_copper_plates.oxidized_copper_pressure_plate": "Utleniona miedziana płytka naciskowa",
+  "item.yama_copper_plates.copper_pressure_plate": "Woskowana miedziana płytka naciskowa",
+  "block.yama_copper_plates.copper_pressure_plate": "Woskowana miedziana płytka naciskowa",
+  "item.yama_copper_plates.waxed_exposed_copper_pressure_plate": "Woskowana zwietrzała miedziana płytka naciskowa",
+  "block.yama_copper_plates.waxed_exposed_copper_pressure_plate": "Woskowana zwietrzała miedziana płytka naciskowa",
+  "item.yama_copper_plates.waxed_weathered_copper_pressure_plate": "Woskowana zaśniedziała miedziana płytka naciskowa",
+  "block.yama_copper_plates.waxed_weathered_copper_pressure_plate": "Woskowana zaśniedziała miedziana płytka naciskowa",
+  "item.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "Woskowana utleniona miedziana płytka naciskowa",
+  "block.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "Woskowana utleniona miedziana płytka naciskowa"
+}
