@@ -1,0 +1,18 @@
+{
+  "item.yama_copper_plates.unwaxed_copper_pressure_plate": "Мідна натискна плита",
+  "block.yama_copper_plates.unwaxed_copper_pressure_plate": "Мідна натискна плита",
+  "item.yama_copper_plates.exposed_copper_pressure_plate": "Наражена мідна натискна плита",
+  "block.yama_copper_plates.exposed_copper_pressure_plate": "Наражена мідна натискна плита",
+  "item.yama_copper_plates.weathered_copper_pressure_plate": "Вивітрена мідна натискна плита",
+  "block.yama_copper_plates.weathered_copper_pressure_plate": "Вивітрена мідна натискна плита",
+  "item.yama_copper_plates.oxidized_copper_pressure_plate": "Окиснена мідна натискна плита",
+  "block.yama_copper_plates.oxidized_copper_pressure_plate": "Окиснена мідна натискна плита",
+  "item.yama_copper_plates.copper_pressure_plate": "Вощена мідна натискна плита",
+  "block.yama_copper_plates.copper_pressure_plate": "Вощена мідна натискна плита",
+  "item.yama_copper_plates.waxed_exposed_copper_pressure_plate": "Вощена наражена мідна натискна плита",
+  "block.yama_copper_plates.waxed_exposed_copper_pressure_plate": "Вощена наражена мідна натискна плита",
+  "item.yama_copper_plates.waxed_weathered_copper_pressure_plate": "Вощена вивітрена мідна натискна плита",
+  "block.yama_copper_plates.waxed_weathered_copper_pressure_plate": "Вощена вивітрена мідна натискна плита",
+  "item.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "Вощена окиснена мідна натискна плита",
+  "block.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "Вощена окиснена мідна натискна плита"
+}

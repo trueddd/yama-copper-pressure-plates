@@ -11,7 +11,7 @@ modId = "yama_copper_plates"
 version = "${mod_version}"
 displayName = "Yama Copper Plates"
 authors = "truetripled"
-logoFile = "icon.png"
+iconFile = "icon.png"
 description = '''
 This mod adds Vanilla-friendly copper pressure plates which can only be triggered by players.
 '''

@@ -1,0 +1,18 @@
+{
+  "item.yama_copper_plates.unwaxed_copper_pressure_plate": "Měděná nášlapná deska",
+  "block.yama_copper_plates.unwaxed_copper_pressure_plate": "Měděná nášlapná deska",
+  "item.yama_copper_plates.exposed_copper_pressure_plate": "Měděná nášlapná deska s lehkou měděnkou",
+  "block.yama_copper_plates.exposed_copper_pressure_plate": "Měděná nášlapná deska s lehkou měděnkou",
+  "item.yama_copper_plates.weathered_copper_pressure_plate": "Měděná nášlapná deska se střední měděnkou",
+  "block.yama_copper_plates.weathered_copper_pressure_plate": "Měděná nášlapná deska se střední měděnkou",
+  "item.yama_copper_plates.oxidized_copper_pressure_plate": "Měděná nášlapná deska s měděnkou",
+  "block.yama_copper_plates.oxidized_copper_pressure_plate": "Měděná nášlapná deska s měděnkou",
+  "item.yama_copper_plates.copper_pressure_plate": "Navoskovaná měděná nášlapná deska",
+  "block.yama_copper_plates.copper_pressure_plate": "Navoskovaná měděná nášlapná deska",
+  "item.yama_copper_plates.waxed_exposed_copper_pressure_plate": "Navoskovaná měděná nášlapná deska s lehkou měděnkou",
+  "block.yama_copper_plates.waxed_exposed_copper_pressure_plate": "Navoskovaná měděná nášlapná deska s lehkou měděnkou",
+  "item.yama_copper_plates.waxed_weathered_copper_pressure_plate": "Navoskovaná měděná nášlapná deska se střední měděnkou",
+  "block.yama_copper_plates.waxed_weathered_copper_pressure_plate": "Navoskovaná měděná nášlapná deska se střední měděnkou",
+  "item.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "Navoskovaná měděná nášlapná deska s měděnkou",
+  "block.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "Navoskovaná měděná nášlapná deska s měděnkou"
+}

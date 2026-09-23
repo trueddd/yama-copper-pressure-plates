@@ -1,0 +1,18 @@
+{
+  "item.yama_copper_plates.unwaxed_copper_pressure_plate": "銅壓力板",
+  "block.yama_copper_plates.unwaxed_copper_pressure_plate": "銅壓力板",
+  "item.yama_copper_plates.exposed_copper_pressure_plate": "斑駁的銅壓力板",
+  "block.yama_copper_plates.exposed_copper_pressure_plate": "斑駁的銅壓力板",
+  "item.yama_copper_plates.weathered_copper_pressure_plate": "風化的銅壓力板",
+  "block.yama_copper_plates.weathered_copper_pressure_plate": "風化的銅壓力板",
+  "item.yama_copper_plates.oxidized_copper_pressure_plate": "氧化的銅壓力板",
+  "block.yama_copper_plates.oxidized_copper_pressure_plate": "氧化的銅壓力板",
+  "item.yama_copper_plates.copper_pressure_plate": "上蠟的銅壓力板",
+  "block.yama_copper_plates.copper_pressure_plate": "上蠟的銅壓力板",
+  "item.yama_copper_plates.waxed_exposed_copper_pressure_plate": "上蠟的斑駁銅壓力板",
+  "block.yama_copper_plates.waxed_exposed_copper_pressure_plate": "上蠟的斑駁銅壓力板",
+  "item.yama_copper_plates.waxed_weathered_copper_pressure_plate": "上蠟的風化銅壓力板",
+  "block.yama_copper_plates.waxed_weathered_copper_pressure_plate": "上蠟的風化銅壓力板",
+  "item.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "上蠟的氧化銅壓力板",
+  "block.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "上蠟的氧化銅壓力板"
+}
