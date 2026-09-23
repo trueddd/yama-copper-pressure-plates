@@ -1,0 +1,18 @@
+{
+  "item.yama_copper_plates.unwaxed_copper_pressure_plate": "Réz nyomólap",
+  "block.yama_copper_plates.unwaxed_copper_pressure_plate": "Réz nyomólap",
+  "item.yama_copper_plates.exposed_copper_pressure_plate": "Megviselt réz nyomólap",
+  "block.yama_copper_plates.exposed_copper_pressure_plate": "Megviselt réz nyomólap",
+  "item.yama_copper_plates.weathered_copper_pressure_plate": "Viharvert réz nyomólap",
+  "block.yama_copper_plates.weathered_copper_pressure_plate": "Viharvert réz nyomólap",
+  "item.yama_copper_plates.oxidized_copper_pressure_plate": "Patinás réz nyomólap",
+  "block.yama_copper_plates.oxidized_copper_pressure_plate": "Patinás réz nyomólap",
+  "item.yama_copper_plates.copper_pressure_plate": "Viaszolt réz nyomólap",
+  "block.yama_copper_plates.copper_pressure_plate": "Viaszolt réz nyomólap",
+  "item.yama_copper_plates.waxed_exposed_copper_pressure_plate": "Viaszolt megviselt réz nyomólap",
+  "block.yama_copper_plates.waxed_exposed_copper_pressure_plate": "Viaszolt megviselt réz nyomólap",
+  "item.yama_copper_plates.waxed_weathered_copper_pressure_plate": "Viaszolt viharvert réz nyomólap",
+  "block.yama_copper_plates.waxed_weathered_copper_pressure_plate": "Viaszolt viharvert réz nyomólap",
+  "item.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "Viaszolt patinás réz nyomólap",
+  "block.yama_copper_plates.waxed_oxidized_copper_pressure_plate": "Viaszolt patinás réz nyomólap"
+}
